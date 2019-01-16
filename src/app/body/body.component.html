@@ -1,0 +1,29 @@
+<div class=" post" *ngFor="let postContent of postContents">
+  <div class="row" >
+     <div class="col-xs-6">
+        <h3>
+          {{ postContent.title }}
+      </h3>
+      <p>
+         {{ postContent.content }}
+      </p>
+      </div> 
+
+<div class="col-xs-5">
+    <img class="img-responsive" src="{{ postContent.url }}" alt=""/>
+</div>
+</div>
+ 
+<hr>
+<div class="row">
+  <div class=" like">
+    <span> {{ postContent.nbrlike }} </span>
+    <a href="#"> t9oul marfhhc insitha jemlaaaa  <i [ngStyle]=" {'color' : postContent.nbrlike !==0 ? 'red' : 'blue'} " [ngClass]=" postContent.nbrlike !== 0 ? 'fa fa-heart' : 'fa fa-gratipay' "></i></a>
+  </div>
+  <div class="cmt">
+    <span> {{ postContent.nbrcmt }} </span>
+    <a href="#"> <i class="fa fa-comments"></i> </a>
+  </div>
+</div>
+
+</div>
